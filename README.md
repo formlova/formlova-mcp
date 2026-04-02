@@ -21,13 +21,13 @@ Reviewing setup instructions and registering the URL does not require a FORMLOVA
 If you want a CLI helper instead, start here:
 
 ```bash
-npx formlova-mcp print --client all
+npx -y formlova-mcp print --client all
 ```
 
 If you want project-level config files written for supported developer tools:
 
 ```bash
-npx formlova-mcp install --client all --scope project --yes
+npx -y formlova-mcp install --client all --scope project --yes
 ```
 
 ## What this package is for
@@ -65,11 +65,11 @@ https://formlova.com/api/mcp
 Print setup snippets only. No files are written.
 
 ```bash
-npx formlova-mcp print --client codex
-npx formlova-mcp print --client claude-code
-npx formlova-mcp print --client cursor
-npx formlova-mcp print --client chatgpt
-npx formlova-mcp print --client gemini-cli
+npx -y formlova-mcp print --client codex
+npx -y formlova-mcp print --client claude-code
+npx -y formlova-mcp print --client cursor
+npx -y formlova-mcp print --client chatgpt
+npx -y formlova-mcp print --client gemini-cli
 ```
 
 ### `install`
@@ -77,7 +77,7 @@ npx formlova-mcp print --client gemini-cli
 Write project-level setup files for supported developer tools.
 
 ```bash
-npx formlova-mcp install --client all --scope project --yes
+npx -y formlova-mcp install --client all --scope project --yes
 ```
 
 Current write targets:
@@ -95,7 +95,7 @@ For ChatGPT and Gemini CLI, `install` prints setup guidance because there is no 
 Check MCP URL reachability and common local config files.
 
 ```bash
-npx formlova-mcp doctor
+npx -y formlova-mcp doctor
 ```
 
 ## Client setup references
