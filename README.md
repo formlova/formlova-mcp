@@ -16,19 +16,19 @@ On first real use, you can log in or sign up during authentication.
 No install needed:
 
 ```bash
-npx @alllova/formlova-mcp print --client all
+npx formlova-mcp print --client all
 ```
 
 Project config write:
 
 ```bash
-npx @alllova/formlova-mcp install --client all --scope project --yes
+npx formlova-mcp install --client all --scope project --yes
 ```
 
 Connectivity and local config check:
 
 ```bash
-npx @alllova/formlova-mcp doctor
+npx formlova-mcp doctor
 ```
 
 ## Commands
@@ -38,11 +38,11 @@ npx @alllova/formlova-mcp doctor
 Print setup snippets only (no file write).
 
 ```bash
-npx @alllova/formlova-mcp print --client codex
-npx @alllova/formlova-mcp print --client claude-code
-npx @alllova/formlova-mcp print --client cursor
-npx @alllova/formlova-mcp print --client chatgpt
-npx @alllova/formlova-mcp print --client gemini-cli
+npx formlova-mcp print --client codex
+npx formlova-mcp print --client claude-code
+npx formlova-mcp print --client cursor
+npx formlova-mcp print --client chatgpt
+npx formlova-mcp print --client gemini-cli
 ```
 
 ### `install`
@@ -58,7 +58,7 @@ Supported writes:
 For ChatGPT and Gemini CLI, this command prints setup instructions (no local config file standard).
 
 ```bash
-npx @alllova/formlova-mcp install --client all --scope project --yes
+npx formlova-mcp install --client all --scope project --yes
 ```
 
 ### `doctor`
@@ -69,7 +69,7 @@ Checks:
 - Presence of common local setup files
 
 ```bash
-npx @alllova/formlova-mcp doctor
+npx formlova-mcp doctor
 ```
 
 ## Client quick references
