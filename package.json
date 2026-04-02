@@ -1,5 +1,5 @@
 {
-  "name": "formlova-mcp",
+  "name": "@alllova/formlova-mcp",
   "version": "0.1.0",
   "description": "FORMLOVA MCP setup helper CLI",
   "license": "MIT",
@@ -37,4 +37,3 @@
     "url": "https://github.com/formlova/formlova-mcp/issues"
   }
 }
-
