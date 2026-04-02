@@ -1,0 +1,40 @@
+{
+  "name": "formlova-mcp",
+  "version": "0.1.0",
+  "description": "FORMLOVA MCP setup helper CLI",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "formlova-mcp": "bin/formlova-mcp.mjs"
+  },
+  "files": [
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "start": "node bin/formlova-mcp.mjs",
+    "check": "node bin/formlova-mcp.mjs doctor"
+  },
+  "keywords": [
+    "mcp",
+    "formlova",
+    "codex",
+    "claude-code",
+    "cursor",
+    "chatgpt",
+    "gemini-cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formlova/formlova-mcp.git"
+  },
+  "homepage": "https://github.com/formlova/formlova-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/formlova/formlova-mcp/issues"
+  }
+}
+
