@@ -30,6 +30,8 @@ If you want project-level config files written for supported developer tools:
 npx -y formlova-mcp install --client all --scope project --yes
 ```
 
+This writes config files only. Authentication still begins inside the client on first use, and some clients require a restart or reconnect before the tools appear.
+
 ## What this package is for
 
 - Print copy-paste setup snippets for supported clients
@@ -79,6 +81,8 @@ Write project-level setup files for supported developer tools.
 ```bash
 npx -y formlova-mcp install --client all --scope project --yes
 ```
+
+`install` does not complete OAuth or client-side authentication for you.
 
 Current write targets:
 
@@ -148,6 +152,7 @@ gemini mcp add --transport http formlova https://formlova.com/api/mcp
 
 - It does not run a local FORMLOVA MCP server
 - It does not replace the normal web-based setup flow for ChatGPT or Claude
+- It does not complete client-side authentication or OAuth on your behalf
 - It does not auto-write user-level config yet
 
 ## Requirements

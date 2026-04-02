@@ -73,6 +73,32 @@ function printConfig(client) {
   console.log(s[client]);
 }
 
+function printPostInstallNextSteps(clients) {
+  console.log("\n[next steps]");
+  console.log(
+    "Config files were written where supported. Authentication still starts inside each client on first use."
+  );
+  if (
+    clients.includes("codex") ||
+    clients.includes("claude-code") ||
+    clients.includes("cursor")
+  ) {
+    console.log(
+      "Reopen the client or reload MCP settings if the tools do not appear immediately."
+    );
+  }
+  if (clients.includes("chatgpt")) {
+    console.log(
+      "ChatGPT still needs manual setup in the web UI before authentication can begin."
+    );
+  }
+  if (clients.includes("gemini-cli")) {
+    console.log(
+      "Gemini CLI still needs the printed add command to be run separately."
+    );
+  }
+}
+
 function ensureDir(filePath) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
 }
@@ -159,7 +185,9 @@ async function main() {
       console.log("  formlova-mcp install --client all --scope project --yes");
       return;
     }
-    for (const client of resolveClients(args.client)) writeProjectConfig(client);
+    const clients = resolveClients(args.client);
+    for (const client of clients) writeProjectConfig(client);
+    printPostInstallNextSteps(clients);
     return;
   }
 
@@ -176,4 +204,3 @@ main().catch((err) => {
   console.error(err);
   process.exitCode = 1;
 });
-

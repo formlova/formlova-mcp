@@ -1,6 +1,6 @@
 {
   "name": "formlova-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Optional MCP setup helper for connecting FORMLOVA to AI clients",
   "license": "MIT",
   "type": "module",
