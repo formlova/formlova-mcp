@@ -1,10 +1,12 @@
 # formlova-mcp
 
-Connect [FORMLOVA](https://formlova.com) to MCP-compatible AI clients without hand-writing common setup files.
+Connect [FORMLOVA](https://formlova.com) to any MCP-compatible AI client without hand-writing setup files.
 
-FORMLOVA is an MCP-native form operations service. It lets you create forms, manage responses, run email workflows, and review analytics from the AI client you already use.
+FORMLOVA is a chat-first form operations service. Most form tools stop at creation — FORMLOVA starts after publish. It covers the full post-publish lifecycle: response management, follow-up emails, reminders, A/B tests, email sequences, analytics, team management, and more — all from your AI chat.
 
-`formlova-mcp` is not the FORMLOVA server. It is a small helper for developers and teams who want setup snippets, project-level config files, and a quick connectivity check.
+**127 MCP tools across 25 categories.** Works with Claude, ChatGPT, Codex, Claude Code, Cursor, Gemini CLI, Windsurf, and any MCP-compatible client.
+
+`formlova-mcp` is not the FORMLOVA server. It is a small CLI helper for setup snippets, project-level config files, and a quick connectivity check.
 
 ## The fastest path
 
@@ -41,14 +43,17 @@ This writes config files only. Authentication still begins inside the client on 
 
 ## Supported clients
 
+This package provides setup helpers for:
+
 - ChatGPT
 - Claude
 - Codex
 - Claude Code
 - Cursor
 - Gemini CLI
+- Windsurf
 
-Any MCP-compatible client can still connect with the same URL:
+Any MCP-compatible client can connect with the same URL — the list above is not a limitation:
 
 ```txt
 https://formlova.com/api/mcp
@@ -171,4 +176,7 @@ https://formlova.com/api/mcp
 
 - Product: [formlova.com](https://formlova.com)
 - Setup guide: [formlova.com/en/setup](https://formlova.com/en/setup)
+- Workflow Place: [formlova.com/en/workflows](https://formlova.com/en/workflows)
+- Blog: [formlova.com/en/blog](https://formlova.com/en/blog)
 - Public repo: [github.com/formlova/formlova-mcp](https://github.com/formlova/formlova-mcp)
+- Product Hunt: [producthunt.com/products/formlova](https://www.producthunt.com/products/formlova?launch=formlova)
