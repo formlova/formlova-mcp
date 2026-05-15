@@ -4,7 +4,7 @@ Connect [FORMLOVA](https://formlova.com) to any MCP-compatible AI client without
 
 FORMLOVA is a chat-first form operations service. Most form tools stop at creation — FORMLOVA starts after publish. It covers the full post-publish lifecycle: response management, follow-up emails, reminders, A/B tests, email sequences, analytics, team management, and more — all from your AI chat.
 
-**127 MCP tools across 25 categories.** Works with Claude, ChatGPT, Codex, Claude Code, Cursor, Gemini CLI, Windsurf, and any MCP-compatible client.
+**128 MCP tools across 25 categories.** Works with Claude, ChatGPT, Codex, Claude Code, Cursor, Gemini CLI, Windsurf, and any MCP-compatible client.
 
 `formlova-mcp` is not the FORMLOVA server. It is a small CLI helper for setup snippets, project-level config files, and a quick connectivity check.
 
