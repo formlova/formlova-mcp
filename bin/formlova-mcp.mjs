@@ -52,7 +52,7 @@ function snippets() {
     }
   }
 }`,
-    chatgpt: "ChatGPT (developer mode): Settings > Apps > Advanced settings (Create app), then add MCP server URL.",
+    chatgpt: "ChatGPT (web): Plugins > + > Add custom MCP server, then add the MCP server URL. Full MCP requires Business, Enterprise, or Edu.",
     "gemini-cli": `gemini mcp add --transport http formlova ${MCP_URL}`,
   };
 }
