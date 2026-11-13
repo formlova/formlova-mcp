@@ -4,7 +4,7 @@ Connect [FORMLOVA](https://formlova.com) to any MCP-compatible AI client without
 
 FORMLOVA is a chat-first form operations service. Most form tools stop at creation — FORMLOVA starts after publish. It covers the full post-publish lifecycle: response management, follow-up emails, reminders, A/B tests, email sequences, LINE messaging, analytics, team management, and more — all from your AI chat.
 
-**138 MCP tools across 24 categories.** Works with Claude, ChatGPT, Codex, Claude Code, Cursor, Gemini CLI, Windsurf, and any MCP-compatible client.
+**174 MCP tools across 24 categories.** Works with Claude, ChatGPT, Codex, Claude Code, Cursor, Gemini CLI, and any MCP-compatible client.
 
 `formlova-mcp` is not the FORMLOVA server. It is a small CLI helper for setup snippets, project-level config files, and a quick connectivity check.
 
@@ -18,7 +18,7 @@ If your AI client already has an MCP add screen, use this URL directly:
 https://formlova.com/api/mcp
 ```
 
-Reviewing setup instructions and registering the URL does not require a FORMLOVA account. On first real use, you can log in or sign up during authentication.
+Reviewing setup instructions and registering the URL does not require a FORMLOVA account. On first real use, you sign in during authentication with your email and password or your Google Account. If you do not have an account yet, sign up at [formlova.com](https://formlova.com) first. If you have enabled two-factor authentication, you will also be asked for the 6-digit code from your authenticator app.
 
 If you want a CLI helper instead, start here:
 
@@ -43,15 +43,15 @@ This writes config files only. Authentication still begins inside the client on 
 
 ## Supported clients
 
-This package provides setup helpers for:
+This package provides setup helpers (`--client`) for:
 
-- ChatGPT
-- Claude
 - Codex
 - Claude Code
 - Cursor
-- Gemini CLI
-- Windsurf
+- ChatGPT (guidance only)
+- Gemini CLI (guidance only)
+
+Claude (web and desktop) is set up from its own Connectors screen; see the reference below.
 
 Any MCP-compatible client can connect with the same URL — the list above is not a limitation:
 
@@ -111,14 +111,15 @@ npx -y formlova-mcp doctor
 
 ### ChatGPT
 
-- Enable developer mode first
-- Then open `Settings > Apps > Advanced settings (Create app)` and add the MCP server URL
+- On the web, open `Plugins` → `+` → `Add custom MCP server` and add the MCP server URL. Developer mode does not need to be turned on first
+- Full MCP access requires a Business, Enterprise, or Edu plan (Business needs an admin or owner; Enterprise and Edu members need RBAC permission). Pro is read/fetch only and cannot create forms
 - Docs: [OpenAI remote MCP guide](https://platform.openai.com/docs/guides/tools-remote-mcp)
 
 ### Claude
 
 - Open `Settings > Connectors`
 - Add the remote MCP server URL
+- On the Free plan, Claude allows one custom connector. Team / Enterprise may require an Owner to add the connector
 - Docs: [Claude remote MCP guide](https://support.anthropic.com/en/articles/11175166-how-do-i-connect-to-remote-mcp-servers-from-claude-desktop)
 
 ### Codex
