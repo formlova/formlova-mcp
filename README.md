@@ -4,7 +4,7 @@ Connect [FORMLOVA](https://formlova.com) to any MCP-compatible AI client without
 
 FORMLOVA is a chat-first form operations service. Most form tools stop at creation — FORMLOVA starts after publish. It covers the full post-publish lifecycle: response management, follow-up emails, reminders, A/B tests, email sequences, LINE messaging, analytics, team management, and more — all from your AI chat.
 
-**174 MCP tools across 24 categories.** Works with Claude, ChatGPT, Grok Bot, Codex, Claude Code, Cursor, Gemini CLI, and any MCP-compatible client.
+**174 MCP tools across 24 categories.** Works with Claude, ChatGPT, Grok Bot, Codex, Claude Code, Cursor, Antigravity, and any MCP-compatible client.
 
 `formlova-mcp` is not the FORMLOVA server. It is a small CLI helper for setup snippets, project-level config files, and a quick connectivity check.
 
@@ -49,7 +49,7 @@ This package provides setup helpers (`--client`) for:
 - Claude Code
 - Cursor
 - ChatGPT (guidance only)
-- Gemini CLI (guidance only)
+- Antigravity (guidance only; the client id is `gemini-cli`)
 
 Claude (web and desktop) and Grok Bot are set up from their own connector screens; see the references below.
 
@@ -157,7 +157,21 @@ You can use the normal MCP UI, or a config file such as:
 }
 ```
 
-### Gemini CLI
+### Antigravity
+
+Add FORMLOVA to `~/.gemini/config/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "formlova": {
+      "serverUrl": "https://formlova.com/api/mcp"
+    }
+  }
+}
+```
+
+The older Gemini CLI command still works:
 
 ```bash
 gemini mcp add --transport http formlova https://formlova.com/api/mcp
