@@ -4,7 +4,7 @@ Connect [FORMLOVA](https://formlova.com) to any MCP-compatible AI client without
 
 FORMLOVA is a chat-first form operations service. Most form tools stop at creation — FORMLOVA starts after publish. It covers the full post-publish lifecycle: response management, follow-up emails, reminders, A/B tests, email sequences, LINE messaging, analytics, team management, and more — all from your AI chat.
 
-**174 MCP tools across 24 categories.** Works with Claude, ChatGPT, Codex, Claude Code, Cursor, Gemini CLI, and any MCP-compatible client.
+**174 MCP tools across 24 categories.** Works with Claude, ChatGPT, Grok Bot, Codex, Claude Code, Cursor, Gemini CLI, and any MCP-compatible client.
 
 `formlova-mcp` is not the FORMLOVA server. It is a small CLI helper for setup snippets, project-level config files, and a quick connectivity check.
 
@@ -51,7 +51,7 @@ This package provides setup helpers (`--client`) for:
 - ChatGPT (guidance only)
 - Gemini CLI (guidance only)
 
-Claude (web and desktop) is set up from its own Connectors screen; see the reference below.
+Claude (web and desktop) and Grok Bot are set up from their own connector screens; see the references below.
 
 Any MCP-compatible client can connect with the same URL — the list above is not a limitation:
 
@@ -122,6 +122,15 @@ npx -y formlova-mcp doctor
 - On the Free plan, Claude allows one custom connector. Team / Enterprise may require an Owner to add the connector
 - Docs: [Claude remote MCP guide](https://support.anthropic.com/en/articles/11175166-how-do-i-connect-to-remote-mcp-servers-from-claude-desktop)
 
+### Grok Bot
+
+- In the Grok Bot desktop app, open `Connect apps` → `Add a custom connector`
+- Enter any name such as `FORMLOVA`, choose `Remote HTTPS` as the type, and enter the MCP server URL as the Server URL
+- Leave HTTP headers and Client ID empty, choose `Add plugin`, and finish OAuth sign-in in your browser
+- The connector is account-wide and available to every Bot you run. You can use FORMLOVA in text chat or in Grok Bot's in-app voice chat (no phone number involved)
+- Requires a plan that includes Grok Bot, such as Premium, Super, or Ultra on The X Subscription, Teams, or Enterprise. A team admin policy may block custom connectors
+- Docs: [Grok Bot computer and apps](https://docs.x.ai/grok-bot/computer-and-apps), [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)
+
 ### Codex
 
 ```bash
@@ -157,7 +166,7 @@ gemini mcp add --transport http formlova https://formlova.com/api/mcp
 ## What it does not do
 
 - It does not run a local FORMLOVA MCP server
-- It does not replace the normal web-based setup flow for ChatGPT or Claude
+- It does not replace the normal app-based setup flow for ChatGPT, Claude, or Grok Bot
 - It does not complete client-side authentication or OAuth on your behalf
 - It does not auto-write user-level config yet
 
